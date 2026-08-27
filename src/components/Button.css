@@ -1,0 +1,31 @@
+/* Botões */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background 0.2s;
+}
+
+.btn-submit {
+    background-color: #b5b5b5;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #a1a1a1;
+}
+
+.btn-clear {
+    background-color: #7a00e6;
+    color: white;
+    margin-bottom: 0; /* Remove a margem do último botão */
+}
+
+.btn-clear:hover {
+    background-color: #6100b8;
+}
