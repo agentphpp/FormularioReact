@@ -4,7 +4,7 @@ function Button() {
     return (
         <div>
             <button type="submit" className="btn-submit" >Enviar Cadastro</button>
-            <button type="button" className="btn-clear">Limpar Dados</button>
+            <button type="reset" className="btn-clear">Limpar Dados</button>
         </div>
     )
 }
