@@ -13,11 +13,7 @@ function Form() {
     const [user, setUser] = useState("")
     const [pass, setPass] = useState("")
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("O formulário não recarregou a página!");
-        console.log({ nome, sobrenome, email, data, telefone, pais, bio, user, pass });
-    }
+    
 
     function colocarNome(pabloVitar) {
         setNome(pabloVitar.target.value);
@@ -58,12 +54,12 @@ function Form() {
     return (
         <div className="container">
            
-            <form onSubmit={handleSubmit}>
+            <form >
                 <h2>Cadastro de Usuário</h2>
 
                 <div className="field-group">
                     <label htmlFor="nome">Nome</label>
-                    <input type="text" name="nome" value={nome} onChange={colocarNome} />
+                    <input type="text" name="nome" value={nome} onChange={colocarNome} required/>
                 </div>
 
                 <div className="field-group">
@@ -73,7 +69,7 @@ function Form() {
 
                 <div className="field-group">
                     <label htmlFor="email">Email</label>
-                    <input type="text" name="email" value={email} onChange={colocarEmail} />
+                    <input type="text" name="email" value={email} onChange={colocarEmail} required/>
                 </div>
 
                 <div className="field-group">
@@ -113,7 +109,7 @@ function Form() {
 
                 <div className="field-group">
                     <label htmlFor="senha">Senha</label>
-                    <input type="password" name="senha" value={pass} onChange={colocarPass} />
+                    <input type="password" name="senha" value={pass} onChange={colocarPass} required minLength={6} maxLength={16}/>
                 </div>
 
                 <div className="checkbox-group">
@@ -122,7 +118,7 @@ function Form() {
                 </div>
 
               
-                <Button Enviar={handleSubmit} />
+                <Button  />
             </form>
         </div>
     )
